@@ -1,1 +1,0 @@
-Go to http://wkhtmltopdf.org/index.html!
