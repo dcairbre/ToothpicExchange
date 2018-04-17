@@ -1,0 +1,10 @@
+﻿apiRules:
+- exclude:
+      uidRegex: ^System\.Object
+      type: Type
+- exclude:
+    uidRegex: ^System\.ComponentModel
+- exclude:
+    uidRegex: ^System\.MarshalByRefObject
+- exclude:
+    uidRegex: ^System\.Windows\.Forms

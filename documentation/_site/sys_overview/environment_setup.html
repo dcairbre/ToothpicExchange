@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Setting up the environment </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Setting up the environment ">
+    <meta name="generator" content="docfx 2.33.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                <ul class="nav level1 navbar-nav">
+                  <li class="active">
+                    <a href="../sys_overview/intro.html" title="System Overview" class="active">System Overview</a>
+                  </li>
+                  <li class="">
+                    <a href="../api/ToothpicExchange.html" title="API Documentation" class="">API Documentation</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="intro.html" title="Introduction" class="">Introduction</a>
+                    </li>
+                    <li class="">
+                      <a href="plugin_installation.html" title="Setting up the Plugin" class="">Setting up the Plugin</a>
+                    </li>
+                    <li class="">
+                      <a href="plugin_usage.html" title="Using the Plugin" class="">Using the Plugin</a>
+                    </li>
+                    <li class="active">
+                      <a href="environment_setup.html" title="Setting up the Technical Environment" class="active">Setting up the Technical Environment</a>
+                    </li>
+                    <li class="">
+                      <a href="plugin_config.html" title="Configuring the Plugin" class="">Configuring the Plugin</a>
+                    </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="setting-up-the-environment">Setting up the environment</h1>
+
+<p>The technical environment to set up for the plugin can be quite complex.
+It is fairly straightforward to load the plugin directly to an instance of OpenDental (e.g. the <a href="http://www.opendental.com/trial.html">trial version</a>). 
+<a href="plugin_installation.html">These instructions</a> outline that process.
+However, in order to setup a development environment you must follow the steps below.</p>
+<h2 id="visual-studio-installation">Visual Studio Installation</h2>
+<p>It is advisable to install <a href="https://www.visualstudio.com">Visual Studio IDE 2017</a> with a minimum .NET 4.5 and C# 7.2</p>
+<p>Once this is done, the root<code>ToothpicExchange folder (the folder directly containing the</code>ToothpicExchange.sln` file) should be copied or set up in a new folder.
+This new folder will contain all of the plugin source code.</p>
+<h2 id="opendental-developer-installation">OpenDental Developer Installation</h2>
+<p>The OpenDental source code must now be downloaded. This is a two step process.</p>
+<ol>
+<li><p>The first step involves downloading the trial version of OpenDental and installing it. This installs all of OpenDental&#39;s additional dependencies and sets up the MySQL server locally.
+Follow the <a href="http://www.opendental.com/trial.html">OpenDental instructions</a> for advice on how to install OpenDental locally.</p>
+</li>
+<li><p>The next step is to actually download the source code. This can only be done through OpenDental&#39;s version control system, Subversion.
+Please consult <a href="http://www.opendental.com/manual/sourcecode.html">this webpage</a> for instructions how to download and set up OpenDental&#39;s source code.
+It is advised to store the OpenDental source code in the same HEAD folder as the ToothpicExchange folder.</p>
+</li>
+</ol>
+<p>Now, open the <code>ToothpicExchange.sln</code> solution file to begin setting up the technical environment.</p>
+<p>In the Visual Studio Solution Explorer (top right hand side) there should be three projects:</p>
+<ul>
+<li>OpenDental</li>
+<li>OpenDentBusiness</li>
+<li>ToothpicExchange</li>
+</ul>
+<ol>
+<li><p>It is likely that the two OpenDental packages will be indicated as &quot;missing&quot;. If that is the case, you must right click and remove them from the solution.</p>
+</li>
+<li><p>Next, you must right click on the solution and click <code>Add</code> &gt; <code>Existing Project</code></p>
+<p> Browse to the following and add them: <code>../OpenDental/OpenDental.csproj</code> and <code>../OpenDentBusiness/OpenDentBusiness.csproj</code></p>
+</li>
+<li><p>Next, right click on the ToothpicExchange project in Solution Explorer and click <code>Add</code> &gt; <code>Reference</code>.</p>
+<p> On the right hand side click <code>Projects</code> &gt; <code>Solution</code> and enable both OpenDental and OpenDentBusiness.</p>
+</li>
+<li><p>Now right click on the ToothpicExchange project in Solution Explorer and click <code>Properties</code>.</p>
+<p> Select <code>Build Events</code> on the left hand side, and edit the &quot;Post-Build event command line&quot;.
+ This should reference to a batch file called CopyDllToOd.bat located in the project folder. </p>
+<p> You will need to alter the absolute path in the properties so that it points to the correct file.
+ This file takes care of transferring Visual Studio&#39;s DLL build of the plugin into the required folder in the OpenDental debug bin.</p>
+</li>
+<li><p>Now, open the <code>CopyDllToOd.bat</code> file in the project folder, and edit the absolute path to match the OpenDental <code>bin/debug</code> folder.</p>
+</li>
+<li><p>Right click on the OpenDental project in Solution Explorer and set it as the startup project.</p>
+</li>
+<li><p>Finally, try build the project and see if it runs. It could take a while initially.</p>
+</li>
+</ol>
+<p>For troubleshooting, and further info, consult the OpenDental <a href="http://opendental.com/manual/plugins.html">plugin setup page</a></p>
+<h2 id="setting-up-json-server">Setting up JSON-Server</h2>
+<ol>
+<li><p>Setup a folder to contain the server files and navigate to it in the Command Prompt.</p>
+</li>
+<li><p>Json-server runs on Node.js, so you will need to install the Node.js package manager (npm).</p>
+<p> Navigate <a href="https://www.npmjs.com/get-npm">here</a> to download and install npm</p>
+</li>
+<li><p>Now you can utilise npm to install json-server. Run the following in the Command Prompt:</p>
+<p> <code>npm install -g json-server</code></p>
+</li>
+<li><p>Create a <code>db.json</code> file, there is a template included in the project folder.</p>
+</li>
+<li><p>Run the following command:</p>
+<p> <code>json-server db.json</code></p>
+<p> This will start a new local server operating on port 3000. It will respond to GET requests for any objects contained in the <code>db.json</code> file, and it will add any new objects to the <code>db.json</code> with a POST request.</p>
+</li>
+</ol>
+<p>For further information, consult the <a href="https://github.com/typicode/json-server">json-server github</a>.</p>
+<h2 id="producing-documentation">Producing Documentation</h2>
+<p>Navigate to the <a href="http://dotnet.github.io/docfx/">DocFx website</a> for information on how to download and setup the latest version of DocFx.</p>
+<p>This project utilises the DocFx.console variant which can be downloaded in Visual Studio through the NuGet Package Manager.</p>
+<p>There are <code>docfx.json</code> and <code>docfxPDF.json</code> files in the project directory. These files are used to specify the DocFx configuration. It is recommended these are not changed, unless you are familiar with the DocFx environment</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

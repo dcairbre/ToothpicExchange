@@ -1,0 +1,10 @@
+- name: Introduction
+  href: intro.md
+- name: Setting up the Plugin
+  href: plugin_installation.md
+- name: Using the Plugin
+  href: plugin_usage.md
+- name: Setting up the Technical Environment
+  href: environment_setup.md
+- name: Configuring the Plugin
+  href: plugin_config.md

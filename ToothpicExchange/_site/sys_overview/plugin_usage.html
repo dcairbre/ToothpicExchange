@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Using the Plugin </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Using the Plugin ">
+    <meta name="generator" content="docfx 2.33.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                <ul class="nav level1 navbar-nav">
+                  <li class="active">
+                    <a href="../sys_overview/intro.html" title="System Overview" class="active">System Overview</a>
+                  </li>
+                  <li class="">
+                    <a href="../api/ToothpicExchange.html" title="API Documentation" class="">API Documentation</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="intro.html" title="Introduction" class="">Introduction</a>
+                    </li>
+                    <li class="">
+                      <a href="plugin_installation.html" title="Setting up the Plugin" class="">Setting up the Plugin</a>
+                    </li>
+                    <li class="active">
+                      <a href="plugin_usage.html" title="Using the Plugin" class="active">Using the Plugin</a>
+                    </li>
+                    <li class="">
+                      <a href="environment_setup.html" title="Setting up the Technical Environment" class="">Setting up the Technical Environment</a>
+                    </li>
+                    <li class="">
+                      <a href="plugin_config.html" title="Configuring the Plugin" class="">Configuring the Plugin</a>
+                    </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="using-the-plugin">Using the Plugin</h1>
+
+<p>The plugin is relatively straightforward. It is accessed through the OpenDental toolbar which is accessible in every module.
+The plugin offers functionality to import or export patient information to/from OpenDental and Toothpic.</p>
+<h2 id="opening-the-plugin">Opening the Plugin</h2>
+<p>Once the plugin has been <a href="plugin_installation.html">installed</a>, simply click the Toothpic button in the main toolbar of OpenDental.</p>
+<p><img src="../images/OD_sc_4.png" alt=""></p>
+<h2 id="logging-in">Logging in</h2>
+<p>The plugin will prompt the practice to login with their Toothpic <code>username</code> and <code>password</code>.</p>
+<p><img src="../images/OD_sc_login.png" alt=""></p>
+<h2 id="homepage">Homepage</h2>
+<p>Once the practice has been authenticated, ToothpicExchange will launch. This is where the practice can either import or export patient information.</p>
+<p><img src="../images/OD_sc_home_noExport.png" alt=""></p>
+<h2 id="importing-info">Importing Info</h2>
+<p>In order to import patient information, simply click the <code>Import Patient Info</code> button to begin.
+A new window will open with a list of users available to import. These users are loaded from Toothpic, and thus only users who the practice are authorised to view will appear on the list.
+There is a search box at the top of the form to filter users by first name, last name or by email address.</p>
+<p><img src="../images/OD_sc_import.png" alt=""></p>
+<p>Select the user to import, and press <code>Add User to OpenDental</code>. If a user with the same name and date of birth already exists in OpenDental, the software will warn about a patient conflict.
+The practice may review this information and choose to proceed if they are not duplicates.</p>
+<p><img src="../images/OD_sc_import_conflict.png" alt=""></p>
+<p>The patient edit form in OpenDental will now launch, and the practice may insert additional information about the patient.
+To save the information, click <code>OK</code>, otherwise <code>Cancel</code>.</p>
+<p><img src="../images/OD_sc_import_ODForm.png" alt=""></p>
+<h2 id="exporting-info">Exporting Info</h2>
+<p>Return to the homepage of the ToothpicExchange plugin. A user must be <strong>selected</strong> in OpenDental before proceeding with an export.
+To select a patient, the practice must click the <code>Select Patient</code> button in the top left hand corner.</p>
+<p><img src="../images/OD_sc_selectPT.png" alt=""></p>
+<p>Once a patient has been selected, the option to <code>Export Patient Info</code> will now become available. Click it to export.</p>
+<p><img src="../images/OD_sc_home_export.png" alt=""></p>
+<p>This will send the patient to Toothpic&#39;s API and will advise the practice whether this was successful or not.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

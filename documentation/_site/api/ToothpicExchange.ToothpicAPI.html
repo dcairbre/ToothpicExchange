@@ -1,0 +1,520 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ToothpicAPI
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ToothpicAPI
+   ">
+    <meta name="generator" content="docfx 2.33.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                <ul class="nav level1 navbar-nav">
+                  <li class="">
+                    <a href="../sys_overview/intro.html" title="System Overview" class="">System Overview</a>
+                  </li>
+                  <li class="active">
+                    <a href="../api/ToothpicExchange.html" title="API Documentation" class="active">API Documentation</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="ToothpicExchange.html" title="ToothpicExchange" class="">ToothpicExchange</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="ToothpicExchange.AuthForm.html" title="AuthForm" class="">AuthForm</a>
+                          </li>
+                          <li class="">
+                            <a href="ToothpicExchange.ExportPatientInfo.html" title="ExportPatientInfo" class="">ExportPatientInfo</a>
+                          </li>
+                          <li class="">
+                            <a href="ToothpicExchange.ExportResult.html" title="ExportResult" class="">ExportResult</a>
+                          </li>
+                          <li class="">
+                            <a href="ToothpicExchange.ImportPatientInfo.html" title="ImportPatientInfo" class="">ImportPatientInfo</a>
+                          </li>
+                          <li class="">
+                            <a href="ToothpicExchange.LaunchToothpicExchange.html" title="LaunchToothpicExchange" class="">LaunchToothpicExchange</a>
+                          </li>
+                          <li class="">
+                            <a href="ToothpicExchange.Plugin.html" title="Plugin" class="">Plugin</a>
+                          </li>
+                          <li class="active">
+                            <a href="ToothpicExchange.ToothpicAPI.html" title="ToothpicAPI" class="active">ToothpicAPI</a>
+                          </li>
+                          <li class="">
+                            <a href="ToothpicExchange.ToothpicUser.html" title="ToothpicUser" class="">ToothpicUser</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ToothpicExchange.ToothpicAPI">
+  
+  
+  <h1 id="ToothpicExchange_ToothpicAPI" data-uid="ToothpicExchange.ToothpicAPI" class="text-break">Class ToothpicAPI
+  </h1>
+  <div class="markdown level0 summary"><p>ToothpicAPI is the class responsible for handling Toothpic&apos;s REST API. All of its attributed are private. It holds the API&apos;s URL and the UserAuth object.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ToothpicAPI</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ToothpicExchange.html">ToothpicExchange</a></h6>
+  <h6><strong>Assembly</strong>: ToothpicExchange.dll</h6>
+  <h5 id="ToothpicExchange_ToothpicAPI_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ToothpicAPI</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="ToothpicExchange_ToothpicAPI__ctor_" data-uid="ToothpicExchange.ToothpicAPI.#ctor*"></a>
+  <h4 id="ToothpicExchange_ToothpicAPI__ctor" data-uid="ToothpicExchange.ToothpicAPI.#ctor">ToothpicAPI()</h4>
+  <div class="markdown level1 summary"><p>Contains the BaseUrl, Authentication object and an API key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ToothpicAPI()</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="ToothpicExchange_ToothpicAPI_AuthenticateUser_" data-uid="ToothpicExchange.ToothpicAPI.AuthenticateUser*"></a>
+  <h4 id="ToothpicExchange_ToothpicAPI_AuthenticateUser_System_String_System_String_" data-uid="ToothpicExchange.ToothpicAPI.AuthenticateUser(System.String,System.String)">AuthenticateUser(String, String)</h4>
+  <div class="markdown level1 summary"><p>Calls the API to authenticate the user. Returns a UserAuth object if successful, otherwise returns null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ToothpicAPI AuthenticateUser(string username, string password)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">username</span></td>
+        <td><p>The user&apos;s username (or email)</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">password</span></td>
+        <td><p>The user&apos;s password</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ToothpicExchange.ToothpicAPI.html">ToothpicAPI</a></td>
+        <td><p>Returns itself if authentication was successful, otherwise null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ToothpicExchange_ToothpicAPI_CheckDuplicateUser_" data-uid="ToothpicExchange.ToothpicAPI.CheckDuplicateUser*"></a>
+  <h4 id="ToothpicExchange_ToothpicAPI_CheckDuplicateUser_ToothpicExchange_ToothpicUser_" data-uid="ToothpicExchange.ToothpicAPI.CheckDuplicateUser(ToothpicExchange.ToothpicUser)">CheckDuplicateUser(ToothpicUser)</h4>
+  <div class="markdown level1 summary"><p>Fetches a list of users and checks for duplictes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CheckDuplicateUser(ToothpicUser searchUser)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ToothpicExchange.ToothpicUser.html">ToothpicUser</a></td>
+        <td><span class="parametername">searchUser</span></td>
+        <td><p>The user to be checked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ToothpicExchange_ToothpicAPI_Execute_" data-uid="ToothpicExchange.ToothpicAPI.Execute*"></a>
+  <h4 id="ToothpicExchange_ToothpicAPI_Execute__1_RestSharp_RestRequest_" data-uid="ToothpicExchange.ToothpicAPI.Execute``1(RestSharp.RestRequest)">Execute&lt;T&gt;(RestRequest)</h4>
+  <div class="markdown level1 summary"><p>This method executes a REST request.
+It is from the RestSharp class <a href="http://restsharp.org">http://restsharp.org</a>
+See RestSharp documentation for more info.
+It makes a request and adds the necessary headers for authentication etc.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T Execute&lt;T&gt;(RestRequest request)where T : new ()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">RestSharp.RestRequest</span></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>Any RestSharp request object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>Returns the object specified, normally ToothpicUser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Can be any type, normally ToothpicUser</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ToothpicExchange_ToothpicAPI_GetAuthenticatedUser_" data-uid="ToothpicExchange.ToothpicAPI.GetAuthenticatedUser*"></a>
+  <h4 id="ToothpicExchange_ToothpicAPI_GetAuthenticatedUser" data-uid="ToothpicExchange.ToothpicAPI.GetAuthenticatedUser">GetAuthenticatedUser()</h4>
+  <div class="markdown level1 summary"><p>Fetches the current authorised user (by their user ID). Primarily used in LaunchToothpicExchange.cs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ToothpicUser GetAuthenticatedUser()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ToothpicExchange.ToothpicUser.html">ToothpicUser</a></td>
+        <td><p>The currently authenticated user as a ToothpicUser object, otherwise null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ToothpicExchange_ToothpicAPI_GetToothpicUser_" data-uid="ToothpicExchange.ToothpicAPI.GetToothpicUser*"></a>
+  <h4 id="ToothpicExchange_ToothpicAPI_GetToothpicUser_System_String_" data-uid="ToothpicExchange.ToothpicAPI.GetToothpicUser(System.String)">GetToothpicUser(String)</h4>
+  <div class="markdown level1 summary"><p>This method fetches a user from the Toothpic API by a specified User ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ToothpicUser GetToothpicUser(string userId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td><p>A Toothpic User ID.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ToothpicExchange.ToothpicUser.html">ToothpicUser</a></td>
+        <td><p>The specified ToothpicUser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ToothpicExchange_ToothpicAPI_GetToothpicUsers_" data-uid="ToothpicExchange.ToothpicAPI.GetToothpicUsers*"></a>
+  <h4 id="ToothpicExchange_ToothpicAPI_GetToothpicUsers" data-uid="ToothpicExchange.ToothpicAPI.GetToothpicUsers">GetToothpicUsers()</h4>
+  <div class="markdown level1 summary"><p>This method fetches a list of Toothpic users from the API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;ToothpicUser&gt; GetToothpicUsers()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="ToothpicExchange.ToothpicUser.html">ToothpicUser</a>&gt;</td>
+        <td><p>A List of Toothpic Users, null otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ToothpicExchange_ToothpicAPI_IsAuthenticated_" data-uid="ToothpicExchange.ToothpicAPI.IsAuthenticated*"></a>
+  <h4 id="ToothpicExchange_ToothpicAPI_IsAuthenticated" data-uid="ToothpicExchange.ToothpicAPI.IsAuthenticated">IsAuthenticated()</h4>
+  <div class="markdown level1 summary"><p>A boolean indicating whether the API object is authenticated or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAuthenticated()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ToothpicExchange_ToothpicAPI_PostToothpicUser_" data-uid="ToothpicExchange.ToothpicAPI.PostToothpicUser*"></a>
+  <h4 id="ToothpicExchange_ToothpicAPI_PostToothpicUser_ToothpicExchange_ToothpicUser_" data-uid="ToothpicExchange.ToothpicAPI.PostToothpicUser(ToothpicExchange.ToothpicUser)">PostToothpicUser(ToothpicUser)</h4>
+  <div class="markdown level1 summary"><p>This method POSTs a Toothpic User to the API.
+The JSON formatting is defined within the method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PostToothpicUser(ToothpicUser user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ToothpicExchange.ToothpicUser.html">ToothpicUser</a></td>
+        <td><span class="parametername">user</span></td>
+        <td><p>Any ToothpicUser.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>A boolean whether it POSTed successfully or not</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

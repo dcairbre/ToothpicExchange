@@ -1,0 +1,362 @@
+{
+  "homepages": [],
+  "source_base_path": "//Mac/Dropbox/VS_projects/ToothpicExchange/ToothpicExchange",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/intro.html",
+          "hash": "vZdZDiqAHx5OXsdfO6YW4Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/OD_sc_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/OD_sc_1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/OD_sc_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/OD_sc_2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/OD_sc_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/OD_sc_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/OD_sc_4.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/OD_sc_4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/OD_sc_home_export.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/OD_sc_home_export.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/OD_sc_home_noExport.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/OD_sc_home_noExport.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/OD_sc_import.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/OD_sc_import.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/OD_sc_import_ODForm.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/OD_sc_import_ODForm.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/OD_sc_import_conflict.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/OD_sc_import_conflict.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/OD_sc_login.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/OD_sc_login.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/OD_sc_selectPT.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/OD_sc_selectPT.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "xTrw9a/WVeawCU02Q4YwkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ToothpicExchange.AuthForm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ToothpicExchange.AuthForm.html",
+          "hash": "uWRNj3dk/2aOteEBBsLaqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ToothpicExchange.ExportPatientInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ToothpicExchange.ExportPatientInfo.html",
+          "hash": "bU1JSQY3wwdZQc3ufEdW4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ToothpicExchange.ExportResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ToothpicExchange.ExportResult.html",
+          "hash": "2dALXcqQGI80eH5TYbXvlw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ToothpicExchange.ImportPatientInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ToothpicExchange.ImportPatientInfo.html",
+          "hash": "yw+WuPrCJJ8LECEu6Fh1nQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ToothpicExchange.LaunchToothpicExchange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ToothpicExchange.LaunchToothpicExchange.html",
+          "hash": "tIUpe4KNaUV+bTFyy8ZKeg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ToothpicExchange.Plugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ToothpicExchange.Plugin.html",
+          "hash": "QOrxtpNMtxa/046X4QNTMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ToothpicExchange.ToothpicAPI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ToothpicExchange.ToothpicAPI.html",
+          "hash": "i2M2GIUi9P2hmND4GzspCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ToothpicExchange.ToothpicUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ToothpicExchange.ToothpicUser.html",
+          "hash": "hpGYvqxa02huMp5DOi2vzA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ToothpicExchange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ToothpicExchange.html",
+          "hash": "px4bC7n0y+IB8Dwmy0q3xQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "sys_overview/environment_setup.md",
+      "output": {
+        ".html": {
+          "relative_path": "sys_overview/environment_setup.html",
+          "hash": "mhh9DUhbdLWz+duaFxIV/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "sys_overview/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "sys_overview/intro.html",
+          "hash": "4ZlGiRo4urhpN4vfB1OjNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "sys_overview/plugin_config.md",
+      "output": {
+        ".html": {
+          "relative_path": "sys_overview/plugin_config.html",
+          "hash": "QX3gam8LYVEcxN0/DN6TsQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "sys_overview/plugin_installation.md",
+      "output": {
+        ".html": {
+          "relative_path": "sys_overview/plugin_installation.html",
+          "hash": "XxDLJXQ0xd8NfzZhmC5Juw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "sys_overview/plugin_usage.md",
+      "output": {
+        ".html": {
+          "relative_path": "sys_overview/plugin_usage.html",
+          "hash": "QE707jVZ71ne6pysZC8wRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

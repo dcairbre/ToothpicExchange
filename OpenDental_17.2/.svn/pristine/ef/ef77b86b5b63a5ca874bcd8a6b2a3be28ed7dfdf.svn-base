@@ -1,0 +1,89 @@
+﻿<Window x:Class="JobManagerDashboard.JobManagerDashboardTiles"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JobManagerDashboard"
+        mc:Ignorable="d"
+        Title="JobManagerDashboard" WindowState="Maximized">
+    <Grid>
+        <ItemsControl Name="EngTiles">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Rows="4"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Button x:Name="button"
+                        Padding="5,5,5,5"
+                        HorizontalContentAlignment="Stretch"
+                        VerticalContentAlignment="Stretch" Background="#fff">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Background="{TemplateBinding Background}">
+                                                <ContentPresenter/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType={x:Type UniformGrid}},Path=IsMouseOver}" Value="True">
+                                        <Setter Property="Opacity" Value=".6" />
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self},Path=IsMouseOver}" Value="True">
+                                        <Setter Property="Opacity" Value="1" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Border Margin="5,5,5,5" BorderBrush="#00ADEE" BorderThickness="1">
+                            <DockPanel Name="engInfo">
+                                <Border DockPanel.Dock="Top" Background="#00ADEE" TextElement.Foreground="#fff">
+                                    <StackPanel DockPanel.Dock="Top" Margin="5,5,5,5" HorizontalAlignment="Center" VerticalAlignment="Top">
+                                        <TextBlock Name="EngName" Text="{Binding EngName}" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center"></TextBlock>
+                                        <TextBlock Name="ClockStatus" Text="{Binding EngClockStatus}" HorizontalAlignment="Center"></TextBlock>
+                                        <TextBlock Name="WorkStatus" Text="{Binding EngWorkStatus}" HorizontalAlignment="Center"></TextBlock>
+                                        <TextBlock Name="Stats1" Text="{Binding StatField1}" HorizontalAlignment="Center">
+                                            <!--We are setting a trigger here on this textblock to hide itself if it is empty-->
+                                            <TextBlock.Style>
+                                                <Style TargetType="{x:Type TextBlock}">
+                                                    <Style.Triggers>
+                                                        <Trigger Property="Text" Value="">
+                                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                                        </Trigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TextBlock.Style>
+                                        </TextBlock>
+                                    </StackPanel>
+                                </Border>
+                                <ListBox Name="EngJobs" ItemsSource="{Binding EngJobs}" 
+                                  ScrollViewer.VerticalScrollBarVisibility="Hidden" 
+                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                  BorderBrush="#00ADEE" BorderThickness="0,1,0,0">
+                                    <!--We are setting a trigger here on this listbox to set the background color to match the header to appear invisible if the list is empty-->
+                                    <ListBox.Style>
+                                        <Style TargetType="{x:Type ListBox}">
+                                            <Setter Property="Visibility" Value="Visible" />
+                                            <Setter Property="Background" Value="#fff" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding HasItems, RelativeSource={RelativeSource Self}}" 
+                                                             Value="False">
+                                                    <Setter Property="Background" Value="#00ADEE" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </ListBox.Style>
+                                </ListBox>
+                            </DockPanel>
+                        </Border>
+                    </Button>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </Grid>
+</Window>

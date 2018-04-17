@@ -1,0 +1,532 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ToothpicExchange</name>
+    </assembly>
+    <members>
+        <member name="T:ToothpicExchange.ToothpicAPI">
+            <summary>
+            ToothpicAPI is the class responsible for handling Toothpic's REST API. All of its attributed are private. It holds the API's URL and the UserAuth object.
+            </summary>
+        </member>
+        <member name="F:ToothpicExchange.ToothpicAPI.BaseUrl">
+            <summary>
+            This is the API's BaseURL. It is changed in the APISettings.settings config file before build.
+            </summary>
+        </member>
+        <member name="F:ToothpicExchange.ToothpicAPI.Auth">
+            <summary>
+            This is the API's authentication object.
+            </summary>
+        </member>
+        <member name="F:ToothpicExchange.ToothpicAPI.apiKey">
+            <summary>
+            The API key for this client (i.e Open Dental).
+            </summary>
+        </member>
+        <member name="F:ToothpicExchange.ToothpicAPI.authEndpoint">
+            <summary>
+            The API endpoint for authentication.
+            </summary>
+        </member>
+        <member name="F:ToothpicExchange.ToothpicAPI.userEndpoint">
+            <summary>
+            The API endpoint for users.
+            </summary>
+        </member>
+        <member name="M:ToothpicExchange.ToothpicAPI.#ctor">
+            <summary>
+            Contains the BaseUrl, Authentication object and an API key.
+            </summary>
+        </member>
+        <member name="M:ToothpicExchange.ToothpicAPI.Execute``1(RestSharp.RestRequest)">
+            <summary>
+            This method executes a REST request.
+            It is from the RestSharp class http://restsharp.org
+            See RestSharp documentation for more info.
+            It makes a request and adds the necessary headers for authentication etc.
+            </summary>
+            <typeparam name="T">Can be any type, normally ToothpicUser</typeparam>
+            <param name="request">Any RestSharp request object</param>
+            <returns>Returns the object specified, normally ToothpicUser.</returns>
+        </member>
+        <member name="M:ToothpicExchange.ToothpicAPI.AuthenticateUser(System.String,System.String)">
+            <summary>
+            Calls the API to authenticate the user. Returns a UserAuth object if successful, otherwise returns null.
+            </summary>
+            <param name="username">The user's username (or email)</param>
+            <param name="password">The user's password</param>
+            <returns>Returns itself if authentication was successful, otherwise null.</returns>
+        </member>
+        <member name="M:ToothpicExchange.ToothpicAPI.IsAuthenticated">
+            <summary>
+            A boolean indicating whether the API object is authenticated or not.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ToothpicExchange.ToothpicAPI.GetAuthenticatedUser">
+            <summary>
+            Fetches the current authorised user (by their user ID). Primarily used in LaunchToothpicExchange.cs.
+            </summary>
+            <returns>The currently authenticated user as a ToothpicUser object, otherwise null.</returns>
+        </member>
+        <member name="M:ToothpicExchange.ToothpicAPI.GetToothpicUser(System.String)">
+            <summary>
+            This method fetches a user from the Toothpic API by a specified User ID.
+            </summary>
+            <param name="userId">A Toothpic User ID.</param>
+            <returns>The specified ToothpicUser.</returns>
+        </member>
+        <member name="M:ToothpicExchange.ToothpicAPI.GetToothpicUsers">
+            <summary>
+            This method fetches a list of Toothpic users from the API.
+            </summary>
+            <returns>A List of Toothpic Users, null otherwise.</returns>
+        </member>
+        <member name="M:ToothpicExchange.ToothpicAPI.CheckDuplicateUser(ToothpicExchange.ToothpicUser)">
+            <summary>
+            Fetches a list of users and checks for duplictes.
+            </summary>
+            <param name="searchUser">The user to be checked.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToothpicExchange.ToothpicAPI.PostToothpicUser(ToothpicExchange.ToothpicUser)">
+            <summary>
+            This method POSTs a Toothpic User to the API.
+            The JSON formatting is defined within the method.
+            </summary>
+            <param name="user">Any ToothpicUser.</param>
+            <returns>A boolean whether it POSTed successfully or not</returns>
+        </member>
+        <member name="T:ToothpicExchange.ToothpicUser">
+            <summary>
+            This class contains the user model as defined by Toothpic's API.
+            It contains methods to convert a Toothpic User to an OpenDental Patient, and vice versa.
+            </summary>
+        </member>
+        <member name="P:ToothpicExchange.ToothpicUser.DateOfBirth">
+            <summary>
+            DateOfBirth mapped to Toothpic API as "dob".
+            </summary>
+        </member>
+        <member name="P:ToothpicExchange.ToothpicUser.FirstName">
+            <summary>
+            FirstName mapped to Toothpic API as "first_name".
+            </summary>
+        </member>
+        <member name="P:ToothpicExchange.ToothpicUser.MiddleName">
+            <summary>
+            MiddleName mapped to Toothpic API as "middle_name".
+            </summary>
+        </member>
+        <member name="P:ToothpicExchange.ToothpicUser.LastName">
+            <summary>
+            LastName mapped to Toothpic API as "last_name".
+            </summary>
+        </member>
+        <member name="P:ToothpicExchange.ToothpicUser.ZipCode">
+            <summary>
+            ZipCode mapped to Toothpic API as "zip_code".
+            </summary>
+        </member>
+        <member name="P:ToothpicExchange.ToothpicUser.Gender">
+            <summary>
+            Gender, recorded as a string from the Toothpic API ("male", "female", "other") which maps to OpenDental's enum PatientGender (male, female, unknown).
+            </summary>
+        </member>
+        <member name="P:ToothpicExchange.ToothpicUser.Email">
+            <summary>
+            Email address from Toothpic API.
+            </summary>
+        </member>
+        <member name="P:ToothpicExchange.ToothpicUser.MemberNumber">
+            <summary>
+            Member Number from Toothpic API, not currently used in OpenDental.
+            </summary>
+        </member>
+        <member name="M:ToothpicExchange.ToothpicUser.#ctor">
+            <summary>
+            Contains all of the user attributes. ToothpicUser(Patient pat) is recommended.
+            </summary>
+        </member>
+        <member name="M:ToothpicExchange.ToothpicUser.#ctor(OpenDentBusiness.Patient)">
+            <summary>
+            Maps an OpenDental patient to a Toothpic user.
+            </summary>
+            <param name="Pat">An OpenDental patient</param>
+        </member>
+        <member name="M:ToothpicExchange.ToothpicUser.CreateNewPatient">
+            <summary>
+            Modified from OpenDental's Patients.CreateNewPatient
+            !important: assumes the user information has already been validated.
+            It creates a new patient from the current instance of ToothpicUser and adds them to the database.
+            </summary>
+            <remarks>
+            This is a complex method which currently conforms to OpenDental 17.2 but should be carefully monitored.
+            This method is used in ImportPatientInfo.AddNewPatient
+            It does the majority of the mapping from a ToothpicUser to an OpenDental patient.
+            </remarks>
+            <returns>A new patient object</returns>
+        </member>
+        <member name="M:ToothpicExchange.ToothpicUser.ToString">
+            <summary>
+            Simply formats ToothpicUser as a string.
+            </summary>
+            <returns>A string with each item separated by a line break.</returns>
+        </member>
+        <member name="T:ToothpicExchange.ExportResult">
+            <summary>
+            This Enum is to allow ExportPatientInfo report back with the degree of success it had.
+            This is beacause ExportPatientInfo does not have a UI, it reports back to the homepage with these enums.
+            </summary>
+        </member>
+        <member name="F:ToothpicExchange.ExportResult.Success">
+            <summary>
+            Successful export.
+            </summary>
+        </member>
+        <member name="F:ToothpicExchange.ExportResult.Failure">
+            <summary>
+            Generic failure.
+            </summary>
+        </member>
+        <member name="F:ToothpicExchange.ExportResult.DuplicateUser">
+            <summary>
+            If a duplicate user already exists in Toothpic's API
+            </summary>
+        </member>
+        <member name="F:ToothpicExchange.ExportResult.Null">
+            <summary>
+            Null object.
+            </summary>
+        </member>
+        <member name="F:ToothpicExchange.ExportResult.AuthenticationFailure">
+            <summary>
+            Authentication failure.
+            </summary>
+        </member>
+        <member name="T:ToothpicExchange.ExportPatientInfo">
+            <summary>
+            This class is responsible for exporting the patient in OpenDental to a user in Toothpic's API.
+            </summary>
+            <remarks>
+            It takes a Patient object, converts into a ToothpicUser object, and advises whether the user was POSTed successfully or not
+            to Toothpic's API.
+            An API object is required to make a POST request, otherwise it will fail.
+            </remarks>
+        </member>
+        <member name="F:ToothpicExchange.ExportPatientInfo.pat">
+            <summary>
+            The current selected patient to be exported.
+            </summary>
+        </member>
+        <member name="F:ToothpicExchange.ExportPatientInfo.call">
+            <summary>
+            The authenticated API call object.
+            </summary>
+        </member>
+        <member name="M:ToothpicExchange.ExportPatientInfo.#ctor(OpenDentBusiness.Patient)">
+            <summary>
+            This method initialises the class with the current selected patient.
+            !important: This constructor is generally used for debug only, it is advised ExportPatientInfo(pat, call) is used instead.
+            </summary>
+            <param name="pat">Usually the current patient within OpenDental</param>
+        </member>
+        <member name="M:ToothpicExchange.ExportPatientInfo.#ctor(OpenDentBusiness.Patient,ToothpicExchange.ToothpicAPI)">
+            <summary>
+            This method initialises the class with the current selected patient and an authenticated API call ready to go.
+            </summary>
+            <param name="pat">Usually the current patient within OpenDental.</param>
+            <param name="call">An authenticated API object.</param>
+        </member>
+        <member name="M:ToothpicExchange.ExportPatientInfo.PostToToothpic">
+            <summary>
+            Implements ToothpicAPI to POST a ToothpicUser.
+            </summary>
+            <returns>An enum ExportResult explaining whether the POST was successful or not.</returns>
+        </member>
+        <member name="M:ToothpicExchange.ExportPatientInfo.WriteHL7ADT">
+            <summary>
+            This method is used to construct a HL7 v2 ADT message to file. It is included for reference.
+            </summary>
+            <returns>A boolean whether the file was successfully written or not</returns>
+        </member>
+        <member name="T:ToothpicExchange.ImportPatientInfo">
+            <summary>
+            This class is responsible for importing users from Toothpic's API into patients in OpenDental.
+            It takes an API object in order to make authenticated requests.
+            </summary>
+            <remarks>
+            It querys the API to get a list of all ToothpicUsers and adds them to a ListView box.
+            The user is selected and the import process begins.
+            A new patient is created in OpenDental, then that patient is opened in a new FormPatientEdit window
+            whereby the patient's information can be altered.
+            If the FormPatientEdit window is cancelled then the user is not added.
+            </remarks>
+        </member>
+        <member name="F:ToothpicExchange.ImportPatientInfo.selectedUser">
+            <summary>
+            This is the selected Toothpic user from the ListView box. Initialiazed to be null.
+            </summary>
+        </member>
+        <member name="F:ToothpicExchange.ImportPatientInfo.call">
+            <summary>
+            The authenticated API call object.
+            </summary>
+        </member>
+        <member name="F:ToothpicExchange.ImportPatientInfo.users">
+            <summary>
+            This is a list of Toothpic users fetched from the API
+            </summary>
+        </member>
+        <member name="M:ToothpicExchange.ImportPatientInfo.#ctor(ToothpicExchange.ToothpicAPI)">
+            <summary>
+            This method initialises the form.
+            </summary>
+        </member>
+        <member name="M:ToothpicExchange.ImportPatientInfo.ImportPatientInfo_Load(System.Object,System.EventArgs)">
+            <summary>
+            Event handling method to be executed when form loads. Sets up the ListView and adds the fetched users.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ToothpicExchange.ImportPatientInfo.searchBox_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Event handling method. Filters the users in the ListView by first name, last name or email. Updates as they type.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ToothpicExchange.ImportPatientInfo.CreateListViewItem(ToothpicExchange.ToothpicUser)">
+            <summary>
+            A helper function to create each ListViewItem.
+            </summary>
+            <param name="user">Any ToothpicUser object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToothpicExchange.ImportPatientInfo.listView1_DoubleClick(System.Object,System.EventArgs)">
+            <summary>
+            Event handling method. When the ListView box is double clicked, this method adds the user to OpenDental as a patient.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ToothpicExchange.ImportPatientInfo.listView1_ItemSelectionChanged(System.Object,System.Windows.Forms.ListViewItemSelectionChangedEventArgs)">
+            <summary>
+            Event handling method. When the selection in the ListView box is changed, it updates the selectedUser.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ToothpicExchange.ImportPatientInfo.importButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Event handling method. When a user is selected and this button is clicked, it will add that user to OpenDental as a patient.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ToothpicExchange.ImportPatientInfo.AddNewPatient(ToothpicExchange.ToothpicUser)">
+            <summary>
+            This method is modified from OpenDental's FormPatientSelect.cs
+            It verifies all the user information and checks the user does not already exist
+            </summary>
+            <remarks>
+            If all is good, then it proceeds with opening up an OpenDental FormPatientEdit.cs with the user's information pre-filled
+            This allows additional information to be added to the Patient before being saved to the DB
+            If the FormPatientEdit.cs modal is cancelled, the user will not be added to the OpenDental database
+            </remarks>
+            <param name="user">Any ToothpicUser</param>
+        </member>
+        <member name="F:ToothpicExchange.ImportPatientInfo.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ToothpicExchange.ImportPatientInfo.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ToothpicExchange.ImportPatientInfo.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ToothpicExchange.LaunchToothpicExchange">
+            <summary>
+            This class is the entry point for ToothpicExchange.
+            When a user clicks the Toothpic button from the menu bar, this class is initialised from Plugin.cs
+            Both import and export functions are launched from within this form.
+            </summary>
+        </member>
+        <member name="F:ToothpicExchange.LaunchToothpicExchange.PatNum">
+            <summary>
+            The current patient Number taken from OpenDental's Patients.GetPat(PatNum)
+            </summary>
+        </member>
+        <member name="F:ToothpicExchange.LaunchToothpicExchange.pat">
+            <summary>
+            The current patient.
+            </summary>
+        </member>
+        <member name="F:ToothpicExchange.LaunchToothpicExchange.call">
+            <summary>
+            The API call object used for API calls.
+            </summary>
+        </member>
+        <member name="F:ToothpicExchange.LaunchToothpicExchange.authenticatedUser">
+            <summary>
+            The user currently authenticated, used mostly for aesthetic purposes.
+            </summary>
+        </member>
+        <member name="M:ToothpicExchange.LaunchToothpicExchange.#ctor">
+            <summary>
+            This method initialises the form.
+            </summary>
+        </member>
+        <member name="M:ToothpicExchange.LaunchToothpicExchange.LaunchToothpicExchange_Load(System.Object,System.EventArgs)">
+            <summary>
+            Event handling method to be executed when form loads. It checks if the user is authenticated, if not launches an AuthForm object.
+            Otherwise, it loads the plugin.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ToothpicExchange.LaunchToothpicExchange.ExportButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Event handling method to be executed when ExportButton is clicked. Launches an ExportPatientInfo instance. 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ToothpicExchange.LaunchToothpicExchange.ImportButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Method to be executed when ImportButton is clicked. Launches a new ImportPatientInfo form
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:ToothpicExchange.LaunchToothpicExchange.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ToothpicExchange.LaunchToothpicExchange.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ToothpicExchange.LaunchToothpicExchange.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ToothpicExchange.Plugin">
+            <summary>
+            This is a plugin class from OpenDental.
+            </summary>
+        </member>
+        <member name="P:ToothpicExchange.Plugin.Host">
+            <summary>
+            This is an OpenDental method.
+            </summary>
+        </member>
+        <member name="M:ToothpicExchange.Plugin.LaunchToolbarButton(System.Int64)">
+            <summary>
+            This is an OpenDental function to launch the main form when the toolbar button is clicked.
+            </summary>
+            <param name="patNum">This is the current patient number from OpenDental</param>
+        </member>
+        <member name="T:ToothpicExchange.AuthForm">
+            <summary>
+            This class contains the form for users to authenticate (login).
+            </summary>
+            <remarks>
+            The user enters the username/password which is used in an API call to authenticate an API object.
+            If the authentication is successful, then that API object is made available for future authenticated API calls.
+            </remarks>
+        </member>
+        <member name="P:ToothpicExchange.AuthForm.Call">
+            <summary>
+            The API object which has been authenticated and ready to use for API calls. It is public so it can pass the object on to the main plugin.
+            </summary>
+        </member>
+        <member name="M:ToothpicExchange.AuthForm.#ctor">
+            <summary>
+            This method initialises the form.
+            </summary>
+        </member>
+        <member name="M:ToothpicExchange.AuthForm.Login_Click(System.Object,System.EventArgs)">
+            <summary>
+            An event handling method once the login button has clicked. It authenticates the user with the API.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ToothpicExchange.AuthForm.Cancel_Click(System.Object,System.EventArgs)">
+            <summary>
+            An event handling method if the cancel button is clicked
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:ToothpicExchange.AuthForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ToothpicExchange.AuthForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ToothpicExchange.AuthForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ToothpicExchange.UserAuth">
+            <summary>
+            This class contains the Auth object which is used for authenticating API calls.
+            </summary>
+        </member>
+        <member name="P:ToothpicExchange.UserAuth.AuthToken">
+            <summary>
+            The Auth token used for API calls. Returned from API once user is authenticated.
+            </summary>
+        </member>
+        <member name="P:ToothpicExchange.UserAuth.UserId">
+            <summary>
+            The authenticated user's ID. Returned from API once user is authenticated
+            </summary>
+        </member>
+        <member name="P:ToothpicExchange.UserAuth.MemberTrackingId">
+            <summary>
+            The member_tracking_id returned from API once user is authenticated.
+            </summary>
+        </member>
+        <member name="T:ToothpicExchange.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ToothpicExchange.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ToothpicExchange.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

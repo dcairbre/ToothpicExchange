@@ -1,0 +1,102 @@
+{
+  "users": [
+    {
+      "id": "1111",
+      "company_id": "040fb98a-8435-4abc-bb9e-4994e6f4ec6a",
+      "dob": "2000-01-20",
+      "email": "JerryMcTester@tcd.ie",
+      "first_name": "Jerry",
+      "gender": "male",
+      "is_primary": true,
+      "last_name": "McTester",
+      "member_tracking_id": "aa0fc553181fe5ee66c0973c5868cc16c3035955",
+      "middle_name": null,
+      "region_id": "52511d73-df79-4a66-bef7-321779db8ccb",
+      "zip_code": "10001",
+      "created_at": "2018-01-20T21:54:19.238+00:00",
+      "updated_at": "2018-01-20T21:55:42.494+00:00"
+    },
+    {
+      "id": "2222",
+      "company_id": "040fb98a-8435-4abc-bb9e-4994e6f4ec6a",
+      "dob": "1980-01-20",
+      "email": "MariaHughes@tcd.ie",
+      "first_name": "Maria",
+      "gender": "female",
+      "is_primary": true,
+      "last_name": "Hughes",
+      "member_tracking_id": "aa0fc553181fe5ee66c0973c5868cc16c3035955",
+      "middle_name": null,
+      "region_id": "52511d73-df79-4a66-bef7-321779db8ccb",
+      "zip_code": "43201",
+      "created_at": "2018-01-20T21:54:19.238+00:00",
+      "updated_at": "2018-01-20T21:55:42.494+00:00"
+    },
+    {
+      "id": "3333",
+      "company_id": "040fb98a-8435-4abc-bb9e-4994e6f4ec6a",
+      "dob": "2000-01-20",
+      "email": "GenericTester@tcd.ie",
+      "first_name": "Generic",
+      "gender": "other",
+      "is_primary": true,
+      "last_name": "Tester",
+      "member_tracking_id": "aa0fc553181fe5ee66c0973c5868cc16c3035955",
+      "middle_name": null,
+      "region_id": "52511d73-df79-4a66-bef7-321779db8ccb",
+      "zip_code": "12012",
+      "created_at": "2018-01-20T21:54:19.238+00:00",
+      "updated_at": "2018-01-20T21:55:42.494+00:00"
+    },
+    {
+      "dob": "1994-12-04",
+      "email": "john@somewhere.com ",
+      "first_name": "John",
+      "middle_name": "L",
+      "last_name": "Smith",
+      "gender": "male",
+      "zip_code": "97302",
+      "id": "UfMIT8S"
+    },
+    {
+      "dob": "1990-01-02",
+      "email": "hello@gmail.com",
+      "first_name": "Emily",
+      "middle_name": "Rose",
+      "last_name": "McFake",
+      "gender": "female",
+      "zip_code": "",
+      "id": "UFi4GsT"
+    },
+    {
+      "dob": "2002-01-20",
+      "email": "tester@mctesting.com",
+      "first_name": "Testing",
+      "middle_name": "",
+      "last_name": "McTester",
+      "gender": "female",
+      "zip_code": "10002",
+      "id": "Bog2sBY"
+    },
+    {
+      "dob": "1994-12-04",
+      "email": "john@somewhere.com ",
+      "first_name": "John",
+      "middle_name": "L",
+      "last_name": "Smith",
+      "gender": "male",
+      "zip_code": "97302",
+      "id": "bSAKFpx"
+    },
+    {
+      "dob": "1980-01-20",
+      "email": "MariaHughes@tcd.ie",
+      "first_name": "Maria",
+      "middle_name": "",
+      "last_name": "Hughes",
+      "gender": "female",
+      "zip_code": "43201",
+      "id": "JjQVOUt"
+    }
+  ]
+}
